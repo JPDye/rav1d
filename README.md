@@ -1,4 +1,4 @@
-# rav1d
+# rav1d!
 
 **rav1d** is an AV1 cross-platform decoder, open-source, and focused on speed
 and correctness. It is a Rust port of
