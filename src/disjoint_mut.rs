@@ -24,7 +24,7 @@ use std::ops::RangeTo;
 use std::ops::RangeToInclusive;
 use std::ptr;
 use std::ptr::addr_of_mut;
-use std::sync::Arc;
+use triomphe::Arc;
 use zerocopy::AsBytes;
 use zerocopy::FromBytes;
 

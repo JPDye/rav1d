@@ -37,7 +37,7 @@ use std::ffi::c_int;
 use std::ffi::c_void;
 use std::mem;
 use std::ptr::NonNull;
-use std::sync::Arc;
+use triomphe::Arc;
 use to_method::To as _;
 use zerocopy::AsBytes;
 use zerocopy::FromBytes;

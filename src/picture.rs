@@ -36,7 +36,7 @@ use std::ptr;
 use std::ptr::fn_addr_eq;
 use std::ptr::NonNull;
 use std::sync::atomic::AtomicU32;
-use std::sync::Arc;
+use triomphe::Arc;
 use to_method::To as _;
 
 #[derive(Clone, Copy, PartialEq, Eq, Hash, Default)]

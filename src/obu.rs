@@ -76,7 +76,7 @@ use std::ffi::c_uint;
 use std::fmt;
 use std::mem;
 use std::sync::atomic::Ordering;
-use std::sync::Arc;
+use triomphe::Arc;
 
 struct Debug {
     enabled: bool,

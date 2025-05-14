@@ -102,7 +102,7 @@ use std::sync::atomic::AtomicBool;
 use std::sync::atomic::AtomicI32;
 use std::sync::atomic::AtomicU32;
 use std::sync::atomic::Ordering;
-use std::sync::Arc;
+use triomphe::Arc;
 use std::sync::OnceLock;
 use std::thread::JoinHandle;
 use strum::FromRepr;

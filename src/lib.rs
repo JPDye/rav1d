@@ -65,7 +65,7 @@ use std::slice;
 use std::sync::atomic::AtomicBool;
 use std::sync::atomic::AtomicU32;
 use std::sync::atomic::Ordering;
-use std::sync::Arc;
+use triomphe::Arc;
 use std::sync::Once;
 use std::thread;
 use to_method::To as _;

@@ -47,7 +47,7 @@ use std::process::abort;
 use std::sync::atomic::AtomicBool;
 use std::sync::atomic::AtomicI32;
 use std::sync::atomic::Ordering;
-use std::sync::Arc;
+use triomphe::Arc;
 use std::thread;
 
 pub const FRAME_ERROR: u32 = u32::MAX - 1;

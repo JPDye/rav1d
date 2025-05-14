@@ -7,7 +7,7 @@ use std::ops::Deref;
 use std::pin::Pin;
 use std::ptr::NonNull;
 use std::slice::SliceIndex;
-use std::sync::Arc;
+use triomphe::Arc;
 
 pub fn arc_into_raw<T: ?Sized>(arc: Arc<T>) -> NonNull<T> {
     let raw = Arc::into_raw(arc).cast_mut();

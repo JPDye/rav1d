@@ -12,7 +12,7 @@ use std::fmt::Formatter;
 use std::ops::BitAnd;
 use std::ops::Deref;
 use std::ops::Sub;
-use std::sync::Arc;
+use triomphe::{UniqueArc, Arc};
 use strum::EnumCount;
 use strum::FromRepr;
 
@@ -823,7 +823,7 @@ impl Rav1dITUTT35 {
     pub fn to_immut(
         mutable: Arc<Mutex<Vec<Rav1dITUTT35>>>,
     ) -> Arc<DRav1d<Box<[Rav1dITUTT35]>, Box<[Dav1dITUTT35]>>> {
-        let mutable = Arc::into_inner(mutable).unwrap().into_inner();
+        let mutable = UniqueArc::into_inner(unsafe { Arc::try_unique(mutable).unwrap_unchecked() }).into_inner();
         let immutable = mutable.into_boxed_slice();
         let rav1d = immutable;
         let dav1d = rav1d.iter().map(Dav1dITUTT35::from).collect();

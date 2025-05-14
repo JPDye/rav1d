@@ -22,7 +22,7 @@ use parking_lot::RwLockWriteGuard;
 use std::cmp;
 use std::ffi::c_uint;
 use std::sync::atomic::AtomicU32;
-use std::sync::Arc;
+use triomphe::Arc;
 use strum::EnumCount;
 
 #[derive(Clone, Default)]
