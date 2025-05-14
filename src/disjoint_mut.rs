@@ -1018,8 +1018,8 @@ unsafe impl<V> AsMutPtr for Box<[V]> {
     type Target = V;
 
     // SAFETY: `AsMutPtr::as_mut_ptr` may derefence `ptr`.
-    unsafe fn as_mut_ptr(mut ptr: *mut Self) -> *mut Self::Target {
-        (&raw mut ptr).cast()
+    unsafe fn as_mut_ptr(ptr: *mut Self) -> *mut Self::Target {
+        (&raw mut *ptr).cast()
     }
 
     fn len(&self) -> usize {
